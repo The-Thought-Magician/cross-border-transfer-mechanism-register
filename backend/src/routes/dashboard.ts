@@ -7,6 +7,7 @@ import {
   tias,
   remediation_tasks,
   reviews,
+  recipients,
 } from '../db/schema.js'
 import { eq } from 'drizzle-orm'
 
@@ -47,6 +48,10 @@ router.get('/', async (c) => {
   const reviewRows = workspaceId
     ? await db.select().from(reviews).where(eq(reviews.workspace_id, workspaceId))
     : await db.select().from(reviews)
+
+  const recipientRows = workspaceId
+    ? await db.select().from(recipients).where(eq(recipients.workspace_id, workspaceId))
+    : await db.select().from(recipients)
 
   const now = Date.now()
   const soon = now + 90 * 86_400_000
@@ -96,16 +101,23 @@ router.get('/', async (c) => {
   return c.json({
     workspace_id: workspaceId ?? null,
     flows: totalFlows,
+    total_flows: totalFlows,
     percent_covered: percentCovered,
+    coverage_pct: percentCovered,
     covered,
+    covered_flows: covered,
     gaps,
+    open_gaps: gaps,
     at_risk: atRisk,
+    at_risk_flows: atRisk,
     expiring: expiringMechanisms + expiringSccs,
     expiring_mechanisms: expiringMechanisms,
     expiring_sccs: expiringSccs,
     overdue_tias: overdueTias,
     open_tasks: openTasks,
     pending_reviews: pendingReviews,
+    total_recipients: recipientRows.length,
+    total_tias: tiaRows.length,
     coverage_breakdown: stateCounts,
     tias_by_status: tiasByStatus,
     totals: {
