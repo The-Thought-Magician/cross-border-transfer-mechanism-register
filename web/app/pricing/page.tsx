@@ -30,7 +30,7 @@ export default function Pricing() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <nav className="border-b border-slate-800 px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-lg font-bold tracking-tight text-indigo-400">
+        <Link href="/" className="text-lg font-bold tracking-tight text-yellow-400">
           CrossBorderTransferMechanismRegister
         </Link>
         <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ export default function Pricing() {
           </Link>
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500"
+            className="rounded-lg bg-yellow-500 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-yellow-400"
           >
             Get Started
           </Link>
@@ -56,7 +56,7 @@ export default function Pricing() {
 
       <section className="mx-auto grid max-w-4xl gap-6 px-6 pb-24 md:grid-cols-2">
         {/* Free plan */}
-        <div className="rounded-2xl border border-indigo-500/40 bg-slate-900/60 p-8">
+        <div className="rounded-2xl border border-yellow-500/40 bg-slate-900/60 p-8">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-white">Free</h2>
             <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
@@ -80,7 +80,7 @@ export default function Pricing() {
           </ul>
           <Link
             href="/auth/sign-up"
-            className="mt-8 block rounded-lg bg-indigo-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-indigo-500"
+            className="mt-8 block rounded-lg bg-yellow-500 px-4 py-3 text-center text-sm font-semibold text-slate-900 hover:bg-yellow-400"
           >
             Start free
           </Link>

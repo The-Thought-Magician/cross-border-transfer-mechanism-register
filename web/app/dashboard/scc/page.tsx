@@ -368,12 +368,12 @@ export default function SccPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search recipient, clause, parties..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All statuses</option>
             {SIGNATURE_STATUSES.map((s) => (
@@ -490,7 +490,7 @@ export default function SccPage() {
             <select
               value={form.recipient_id}
               onChange={(e) => setForm({ ...form, recipient_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               <option value="">Select recipient…</option>
               {recipients.map((r) => (
@@ -506,7 +506,7 @@ export default function SccPage() {
               <input
                 value={form.clause_version}
                 onChange={(e) => setForm({ ...form, clause_version: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <div>
@@ -514,7 +514,7 @@ export default function SccPage() {
               <select
                 value={form.module}
                 onChange={(e) => setForm({ ...form, module: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {MODULES.map((m) => (
                   <option key={m} value={m}>
@@ -530,7 +530,7 @@ export default function SccPage() {
               value={form.parties}
               onChange={(e) => setForm({ ...form, parties: e.target.value })}
               placeholder="Exporter Ltd, Importer Inc"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -538,7 +538,7 @@ export default function SccPage() {
             <input
               value={form.docking_parties}
               onChange={(e) => setForm({ ...form, docking_parties: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -547,7 +547,7 @@ export default function SccPage() {
               <select
                 value={form.signature_status}
                 onChange={(e) => setForm({ ...form, signature_status: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {SIGNATURE_STATUSES.map((s) => (
                   <option key={s} value={s}>
@@ -562,7 +562,7 @@ export default function SccPage() {
                 type="date"
                 value={form.signed_date}
                 onChange={(e) => setForm({ ...form, signed_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -573,7 +573,7 @@ export default function SccPage() {
                 type="date"
                 value={form.effective_date}
                 onChange={(e) => setForm({ ...form, effective_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <div>
@@ -582,7 +582,7 @@ export default function SccPage() {
                 type="date"
                 value={form.expiry_date}
                 onChange={(e) => setForm({ ...form, expiry_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -601,7 +601,7 @@ export default function SccPage() {
               value={form.notes}
               onChange={(e) => setForm({ ...form, notes: e.target.value })}
               rows={2}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>

@@ -149,7 +149,7 @@ export default function AdequacyExplorerPage() {
       <PublicNav />
       <div className="mx-auto max-w-6xl px-6 py-10">
         <header className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400">Public register</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-yellow-400">Public register</p>
           <h1 className="mt-1 text-3xl font-black tracking-tight">Country Adequacy Explorer</h1>
           <p className="mt-2 max-w-2xl text-sm text-slate-400">
             EU (GDPR Chapter V) and UK adequacy status for cross-border personal-data transfers, with the
@@ -180,7 +180,7 @@ export default function AdequacyExplorerPage() {
                   setStatusFilter('all')
                 }}
                 className={`px-4 py-2 text-sm font-medium ${
-                  regime === r ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'
+                  regime === r ? 'bg-yellow-500 text-slate-900' : 'bg-slate-900 text-slate-400 hover:text-white'
                 }`}
               >
                 {r === 'eu' ? 'EU adequacy' : 'UK adequacy'}
@@ -191,12 +191,12 @@ export default function AdequacyExplorerPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search country or ISO code..."
-            className="min-w-[14rem] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+            className="min-w-[14rem] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={region}
             onChange={(e) => setRegion(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All regions</option>
             {regions.map((r) => (
@@ -208,7 +208,7 @@ export default function AdequacyExplorerPage() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All statuses</option>
             {statuses.map((s) => (
@@ -297,7 +297,7 @@ export default function AdequacyExplorerPage() {
                   <p className="text-sm text-slate-500">No recorded adequacy-change events yet.</p>
                 ) : (
                   recentEvents.map((e) => (
-                    <div key={e.id} className="border-l-2 border-indigo-500/40 pl-3">
+                    <div key={e.id} className="border-l-2 border-yellow-500/40 pl-3">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-sm font-medium text-white">{countryName(e.country_id)}</span>
                         <span className="text-xs text-slate-500">{fmtDate(e.effective_date || e.created_at)}</span>
@@ -344,7 +344,7 @@ export default function AdequacyExplorerPage() {
 function PublicNav() {
   return (
     <nav className="flex items-center justify-between border-b border-slate-800 px-6 py-4">
-      <Link href="/" className="text-lg font-bold tracking-tight text-indigo-400">
+      <Link href="/" className="text-lg font-bold tracking-tight text-yellow-400">
         CrossBorderTransferMechanismRegister
       </Link>
       <div className="flex items-center gap-4">
@@ -356,7 +356,7 @@ function PublicNav() {
         </Link>
         <Link
           href="/auth/sign-up"
-          className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500"
+          className="rounded-lg bg-yellow-500 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-yellow-400"
         >
           Get Started
         </Link>

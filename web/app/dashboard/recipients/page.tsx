@@ -241,12 +241,12 @@ export default function RecipientsPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by name, group, email..."
-              className="min-w-[200px] flex-1 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+              className="min-w-[200px] flex-1 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
             />
             <select
               value={roleFilter}
               onChange={(e) => setRoleFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             >
               <option value="all">All roles</option>
               {ROLES.map((r) => (
@@ -258,7 +258,7 @@ export default function RecipientsPage() {
             <select
               value={dpfFilter}
               onChange={(e) => setDpfFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             >
               <option value="all">All DPF</option>
               <option value="certified">DPF certified</option>
@@ -271,8 +271,8 @@ export default function RecipientsPage() {
             </select>
           </div>
           {selected.size > 0 && (
-            <div className="mt-3 flex items-center justify-between rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-3 py-2">
-              <span className="text-sm text-indigo-200">{selected.size} selected</span>
+            <div className="mt-3 flex items-center justify-between rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-2">
+              <span className="text-sm text-yellow-200">{selected.size} selected</span>
               <div className="flex gap-2">
                 <Button size="sm" variant="ghost" onClick={() => setSelected(new Set())}>
                   Clear
@@ -306,7 +306,7 @@ export default function RecipientsPage() {
                       type="checkbox"
                       checked={allSelected}
                       onChange={toggleAll}
-                      className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-indigo-500"
+                      className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-yellow-400"
                     />
                   </TH>
                   <TH>Recipient</TH>
@@ -328,13 +328,13 @@ export default function RecipientsPage() {
                           type="checkbox"
                           checked={selected.has(r.id)}
                           onChange={() => toggleOne(r.id)}
-                          className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-indigo-500"
+                          className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-yellow-400"
                         />
                       </TD>
                       <TD>
                         <Link
                           href={`/dashboard/recipients/${r.id}`}
-                          className="font-medium text-white hover:text-indigo-300"
+                          className="font-medium text-white hover:text-yellow-300"
                         >
                           {r.legal_name}
                         </Link>
@@ -343,7 +343,7 @@ export default function RecipientsPage() {
                       <TD>{label(r.role)}</TD>
                       <TD>
                         {c ? (
-                          <Link href={`/dashboard/countries/${c.id}`} className="text-slate-300 hover:text-indigo-300">
+                          <Link href={`/dashboard/countries/${c.id}`} className="text-slate-300 hover:text-yellow-300">
                             {c.iso_code ?? c.name}
                           </Link>
                         ) : (
@@ -367,7 +367,7 @@ export default function RecipientsPage() {
                       </TD>
                       <TD>
                         {r.contact_email ? (
-                          <a href={`mailto:${r.contact_email}`} className="text-indigo-400 hover:text-indigo-300">
+                          <a href={`mailto:${r.contact_email}`} className="text-yellow-400 hover:text-yellow-300">
                             {r.contact_email}
                           </a>
                         ) : (
@@ -378,7 +378,7 @@ export default function RecipientsPage() {
                         <div className="flex justify-end gap-2">
                           <Link
                             href={`/dashboard/recipients/${r.id}`}
-                            className="text-sm text-indigo-400 hover:text-indigo-300"
+                            className="text-sm text-yellow-400 hover:text-yellow-300"
                           >
                             Open
                           </Link>
@@ -424,7 +424,7 @@ export default function RecipientsPage() {
               value={form.legal_name}
               onChange={(e) => setForm({ ...form, legal_name: e.target.value })}
               placeholder="Acme Cloud Services Inc."
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -433,7 +433,7 @@ export default function RecipientsPage() {
               <select
                 value={form.role}
                 onChange={(e) => setForm({ ...form, role: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               >
                 {ROLES.map((r) => (
                   <option key={r} value={r}>
@@ -447,7 +447,7 @@ export default function RecipientsPage() {
               <select
                 value={form.country_id}
                 onChange={(e) => setForm({ ...form, country_id: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               >
                 <option value="">Select country</option>
                 {countries.map((c) => (
@@ -466,7 +466,7 @@ export default function RecipientsPage() {
                 value={form.group_affiliation}
                 onChange={(e) => setForm({ ...form, group_affiliation: e.target.value })}
                 placeholder="Parent group / BCR group"
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <div>
@@ -476,7 +476,7 @@ export default function RecipientsPage() {
                 value={form.contact_email}
                 onChange={(e) => setForm({ ...form, contact_email: e.target.value })}
                 placeholder="privacy@vendor.com"
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -486,7 +486,7 @@ export default function RecipientsPage() {
                 type="checkbox"
                 checked={form.dpf_certified}
                 onChange={(e) => setForm({ ...form, dpf_certified: e.target.checked })}
-                className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-indigo-500"
+                className="h-4 w-4 rounded border-slate-600 bg-slate-800 accent-yellow-400"
               />
               Data Privacy Framework (DPF) certified
             </label>
@@ -497,7 +497,7 @@ export default function RecipientsPage() {
                   <select
                     value={form.dpf_status}
                     onChange={(e) => setForm({ ...form, dpf_status: e.target.value })}
-                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                   >
                     {DPF_STATUSES.map((s) => (
                       <option key={s} value={s}>
@@ -512,7 +512,7 @@ export default function RecipientsPage() {
                     type="date"
                     value={form.dpf_renewal_date}
                     onChange={(e) => setForm({ ...form, dpf_renewal_date: e.target.value })}
-                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                   />
                 </div>
               </div>
@@ -524,7 +524,7 @@ export default function RecipientsPage() {
               value={form.notes}
               onChange={(e) => setForm({ ...form, notes: e.target.value })}
               rows={2}
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </div>

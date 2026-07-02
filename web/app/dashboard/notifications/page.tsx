@@ -203,7 +203,7 @@ export default function NotificationsPage() {
               <button
                 onClick={() => setTab('all')}
                 className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
-                  tab === 'all' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-slate-200'
+                  tab === 'all' ? 'bg-yellow-500 text-slate-900' : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
                 All
@@ -211,7 +211,7 @@ export default function NotificationsPage() {
               <button
                 onClick={() => setTab('unread')}
                 className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
-                  tab === 'unread' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-slate-200'
+                  tab === 'unread' ? 'bg-yellow-500 text-slate-900' : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
                 Unread {unreadCount ? `(${unreadCount})` : ''}
@@ -222,12 +222,12 @@ export default function NotificationsPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search notifications…"
-                className="w-48 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-48 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
               <select
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All categories</option>
                 {categories.map((c) => (
@@ -261,12 +261,12 @@ export default function NotificationsPage() {
                   <li
                     key={n.id}
                     className={`flex items-start gap-3 px-5 py-4 transition ${
-                      n.read ? 'bg-transparent' : 'bg-indigo-500/5'
+                      n.read ? 'bg-transparent' : 'bg-yellow-400/5'
                     }`}
                   >
                     <span
                       className={`mt-1.5 h-2 w-2 flex-shrink-0 rounded-full ${
-                        n.read ? 'bg-slate-700' : 'bg-indigo-400'
+                        n.read ? 'bg-slate-700' : 'bg-yellow-400'
                       }`}
                       aria-hidden
                     />
@@ -283,7 +283,7 @@ export default function NotificationsPage() {
                         <a
                           href={link}
                           onClick={() => markRead(n)}
-                          className="mt-1 inline-block text-xs font-medium text-indigo-400 hover:text-indigo-300"
+                          className="mt-1 inline-block text-xs font-medium text-yellow-400 hover:text-yellow-300"
                         >
                           View {n.entity_type} →
                         </a>

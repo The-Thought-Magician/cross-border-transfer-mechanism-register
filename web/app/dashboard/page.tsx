@@ -169,7 +169,7 @@ export default function DashboardPage() {
         </div>
       )}
       {seedMsg && (
-        <div className="mb-6 rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-4 py-3 text-sm text-indigo-200">
+        <div className="mb-6 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-200">
           {seedMsg}
         </div>
       )}
@@ -267,7 +267,7 @@ export default function DashboardPage() {
               { href: '/dashboard/adequacy', label: 'Adequacy tracker', desc: 'Watch country changes' },
             ].map((q) => (
               <Link key={q.href} href={q.href}>
-                <Card className="h-full transition-colors hover:border-indigo-500/50">
+                <Card className="h-full transition-colors hover:border-yellow-400/50">
                   <CardBody>
                     <div className="text-sm font-semibold text-white">{q.label}</div>
                     <div className="mt-1 text-xs text-slate-500">{q.desc}</div>

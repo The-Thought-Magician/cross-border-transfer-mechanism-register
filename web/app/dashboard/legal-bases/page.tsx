@@ -203,12 +203,12 @@ export default function LegalBasesPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search code, article, name..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={catFilter}
             onChange={(e) => setCatFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All categories</option>
             {CATEGORIES.map((c) => (
@@ -257,7 +257,7 @@ export default function LegalBasesPage() {
               <TBody>
                 {filtered.map((i) => (
                   <TR key={i.id}>
-                    <TD className="font-mono text-xs text-indigo-300">{i.code || '—'}</TD>
+                    <TD className="font-mono text-xs text-yellow-200">{i.code || '—'}</TD>
                     <TD className="font-medium text-slate-100">{i.name || '—'}</TD>
                     <TD className="text-slate-400">{i.article || '—'}</TD>
                     <TD>
@@ -316,7 +316,7 @@ export default function LegalBasesPage() {
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div className="rounded-lg border border-slate-800 bg-slate-950 px-3 py-2">
                 <div className="text-xs text-slate-500">Code</div>
-                <div className="font-mono text-indigo-300">{detail.code || '—'}</div>
+                <div className="font-mono text-yellow-200">{detail.code || '—'}</div>
               </div>
               <div className="rounded-lg border border-slate-800 bg-slate-950 px-3 py-2">
                 <div className="text-xs text-slate-500">Article</div>
@@ -360,7 +360,7 @@ export default function LegalBasesPage() {
                 value={form.code}
                 onChange={(e) => setForm({ ...form, code: e.target.value })}
                 placeholder="e.g. art49-1-a"
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <div>
@@ -369,7 +369,7 @@ export default function LegalBasesPage() {
                 value={form.article}
                 onChange={(e) => setForm({ ...form, article: e.target.value })}
                 placeholder="e.g. Art. 49(1)(a)"
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -379,7 +379,7 @@ export default function LegalBasesPage() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="e.g. Explicit consent"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -387,7 +387,7 @@ export default function LegalBasesPage() {
             <select
               value={form.category}
               onChange={(e) => setForm({ ...form, category: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               {CATEGORIES.map((c) => (
                 <option key={c.value} value={c.value}>
@@ -423,7 +423,7 @@ export default function LegalBasesPage() {
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               rows={3}
               placeholder="Conditions and constraints for relying on this basis."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>

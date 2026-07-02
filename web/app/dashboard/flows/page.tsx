@@ -200,7 +200,7 @@ export default function FlowsPage() {
             key={state}
             onClick={() => setCoverageFilter(coverageFilter === state ? 'all' : state)}
             className={`rounded-full border px-3 py-1 text-xs transition-colors ${
-              coverageFilter === state ? 'border-indigo-500 bg-indigo-500/10' : 'border-slate-700 hover:border-slate-600'
+              coverageFilter === state ? 'border-yellow-400 bg-yellow-500/10' : 'border-slate-700 hover:border-slate-600'
             }`}
           >
             <Badge tone={coverageTone(state)}>{labelize(state)}</Badge>
@@ -214,12 +214,12 @@ export default function FlowsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search flows, entities, recipients..."
-          className="min-w-[16rem] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+          className="min-w-[16rem] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
         />
         <select
           value={coverageFilter}
           onChange={(e) => setCoverageFilter(e.target.value)}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
         >
           <option value="all">All coverage</option>
           {coverageStates.map((s) => (
@@ -231,7 +231,7 @@ export default function FlowsPage() {
         <select
           value={regionFilter}
           onChange={(e) => setRegionFilter(e.target.value)}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
         >
           <option value="all">All source regions</option>
           {regions.map((r) => (
@@ -245,7 +245,7 @@ export default function FlowsPage() {
             type="checkbox"
             checked={showArchived}
             onChange={(e) => setShowArchived(e.target.checked)}
-            className="h-4 w-4 rounded border-slate-700 bg-slate-900 accent-indigo-600"
+            className="h-4 w-4 rounded border-slate-700 bg-slate-900 accent-yellow-500"
           />
           Show archived
         </label>
@@ -293,7 +293,7 @@ export default function FlowsPage() {
                 {filtered.map((f) => (
                   <TR key={f.id}>
                     <TD>
-                      <Link href={`/dashboard/flows/${f.id}`} className="font-medium text-white hover:text-indigo-300">
+                      <Link href={`/dashboard/flows/${f.id}`} className="font-medium text-white hover:text-yellow-300">
                         {f.name}
                       </Link>
                       {f.archived && (
@@ -399,9 +399,9 @@ export default function FlowsPage() {
           onChange={(e) => setImportText(e.target.value)}
           rows={10}
           placeholder={'[{"name":"EU → US payroll","source_region":"EEA","purpose":"Payroll processing"}]'}
-          className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 font-mono text-xs text-white placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+          className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 font-mono text-xs text-white placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
         />
-        {importMsg && <p className="mt-3 text-sm text-indigo-200">{importMsg}</p>}
+        {importMsg && <p className="mt-3 text-sm text-yellow-200">{importMsg}</p>}
       </Modal>
     </div>
   )

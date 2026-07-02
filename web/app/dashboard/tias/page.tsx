@@ -196,12 +196,12 @@ export default function TiasPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search title, flow, summary..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All statuses</option>
             {STATUSES.map((s) => (
@@ -213,7 +213,7 @@ export default function TiasPage() {
           <select
             value={outcomeFilter}
             onChange={(e) => setOutcomeFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All outcomes</option>
             {OUTCOMES.map((o) => (
@@ -259,7 +259,7 @@ export default function TiasPage() {
                   return (
                     <TR key={t.id}>
                       <TD className="font-medium text-slate-100">
-                        <Link href={`/dashboard/tias/${t.id}`} className="hover:text-indigo-300">
+                        <Link href={`/dashboard/tias/${t.id}`} className="hover:text-yellow-300">
                           {t.title || 'Untitled TIA'}
                         </Link>
                       </TD>
@@ -335,7 +335,7 @@ export default function TiasPage() {
               value={form.title}
               onChange={(e) => setForm({ ...form, title: e.target.value })}
               placeholder="TIA — US analytics processor"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -343,7 +343,7 @@ export default function TiasPage() {
             <select
               value={form.flow_id}
               onChange={(e) => setForm({ ...form, flow_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               <option value="">No linked flow</option>
               {flows.map((f) => (
@@ -359,7 +359,7 @@ export default function TiasPage() {
               type="date"
               value={form.review_due_date}
               onChange={(e) => setForm({ ...form, review_due_date: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -369,7 +369,7 @@ export default function TiasPage() {
               onChange={(e) => setForm({ ...form, summary: e.target.value })}
               rows={3}
               placeholder="Scope and context of this assessment…"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>

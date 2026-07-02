@@ -166,7 +166,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
   if (error && !country) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/adequacy" className="text-sm text-indigo-400 hover:text-indigo-300">
+        <Link href="/dashboard/adequacy" className="text-sm text-yellow-400 hover:text-yellow-300">
           ← Back to adequacy tracker
         </Link>
         <div className="rounded-lg border border-rose-700 bg-rose-900/30 p-4 text-sm text-rose-300">
@@ -195,7 +195,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className="space-y-6">
-      <Link href="/dashboard/adequacy" className="text-sm text-indigo-400 hover:text-indigo-300">
+      <Link href="/dashboard/adequacy" className="text-sm text-yellow-400 hover:text-yellow-300">
         ← Back to adequacy tracker
       </Link>
 
@@ -245,7 +245,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 <select
                   value={edit.eu_adequacy_status}
                   onChange={(e) => setEdit({ ...edit, eu_adequacy_status: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 >
                   <option value="">Unset</option>
                   {STATUSES.map((s) => (
@@ -260,7 +260,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 <select
                   value={edit.uk_adequacy_status}
                   onChange={(e) => setEdit({ ...edit, uk_adequacy_status: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 >
                   <option value="">Unset</option>
                   {STATUSES.map((s) => (
@@ -275,7 +275,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 <input
                   value={edit.eu_decision_ref}
                   onChange={(e) => setEdit({ ...edit, eu_decision_ref: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 />
               </div>
               <div>
@@ -283,7 +283,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 <input
                   value={edit.uk_decision_ref}
                   onChange={(e) => setEdit({ ...edit, uk_decision_ref: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 />
               </div>
               <div>
@@ -292,7 +292,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                   type="date"
                   value={edit.review_date}
                   onChange={(e) => setEdit({ ...edit, review_date: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 />
               </div>
               <div>
@@ -300,7 +300,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 <select
                   value={edit.surveillance_risk}
                   onChange={(e) => setEdit({ ...edit, surveillance_risk: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 >
                   <option value="">Unset</option>
                   {SURVEILLANCE.map((s) => (
@@ -316,7 +316,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                   value={edit.notes}
                   onChange={(e) => setEdit({ ...edit, notes: e.target.value })}
                   rows={3}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
                 />
               </div>
             </div>
@@ -386,7 +386,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
               <ol className="relative space-y-5 border-l border-slate-800 pl-6">
                 {sortedEvents.map((e) => (
                   <li key={e.id} className="relative">
-                    <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-indigo-500" />
+                    <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-yellow-400" />
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge tone="info">{(e.regime ?? '—').toUpperCase()}</Badge>
                       {e.old_status && <Badge tone={coverageTone(e.old_status)}>{statusLabel(e.old_status)}</Badge>}
@@ -435,7 +435,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                 {flows.map((f) => (
                   <TR key={f.id}>
                     <TD>
-                      <Link href={`/dashboard/flows/${f.id}`} className="font-medium text-white hover:text-indigo-300">
+                      <Link href={`/dashboard/flows/${f.id}`} className="font-medium text-white hover:text-yellow-300">
                         {f.name ?? f.id}
                       </Link>
                     </TD>
@@ -446,7 +446,7 @@ export default function CountryDetailPage({ params }: { params: Promise<{ id: st
                       <Badge tone={coverageTone(f.coverage_state)}>{statusLabel(f.coverage_state)}</Badge>
                     </TD>
                     <TD className="text-right">
-                      <Link href={`/dashboard/flows/${f.id}`} className="text-sm text-indigo-400 hover:text-indigo-300">
+                      <Link href={`/dashboard/flows/${f.id}`} className="text-sm text-yellow-400 hover:text-yellow-300">
                         Open
                       </Link>
                     </TD>

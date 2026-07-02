@@ -274,7 +274,7 @@ export default function AdequacyTrackerPage() {
                               ? 'bg-amber-500'
                               : coverageTone(b.status ?? b.label) === 'success'
                                 ? 'bg-emerald-500'
-                                : 'bg-indigo-500'
+                                : 'bg-yellow-400'
                         }`}
                         style={{ width: `${pct}%` }}
                       />
@@ -295,12 +295,12 @@ export default function AdequacyTrackerPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search countries..."
-              className="min-w-[180px] flex-1 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+              className="min-w-[180px] flex-1 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
             />
             <select
               value={regimeFilter}
               onChange={(e) => setRegimeFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             >
               <option value="all">All regimes</option>
               {REGIMES.map((r) => (
@@ -312,7 +312,7 @@ export default function AdequacyTrackerPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             >
               <option value="all">All statuses</option>
               {STATUSES.map((s) => (
@@ -348,7 +348,7 @@ export default function AdequacyTrackerPage() {
                 {filteredCountries.map((c) => (
                   <TR key={c.id}>
                     <TD>
-                      <Link href={`/dashboard/countries/${c.id}`} className="font-medium text-white hover:text-indigo-300">
+                      <Link href={`/dashboard/countries/${c.id}`} className="font-medium text-white hover:text-yellow-300">
                         {c.iso_code ? `${c.iso_code} · ` : ''}
                         {c.name}
                       </Link>
@@ -369,7 +369,7 @@ export default function AdequacyTrackerPage() {
                       )}
                     </TD>
                     <TD className="text-right">
-                      <Link href={`/dashboard/countries/${c.id}`} className="text-sm text-indigo-400 hover:text-indigo-300">
+                      <Link href={`/dashboard/countries/${c.id}`} className="text-sm text-yellow-400 hover:text-yellow-300">
                         Open
                       </Link>
                     </TD>
@@ -398,11 +398,11 @@ export default function AdequacyTrackerPage() {
                 const c = countryName.get(e.country_id)
                 return (
                   <li key={e.id} className="relative">
-                    <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-indigo-500" />
+                    <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-yellow-400" />
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="text-sm font-semibold text-white">
                         {c ? (
-                          <Link href={`/dashboard/countries/${c.id}`} className="hover:text-indigo-300">
+                          <Link href={`/dashboard/countries/${c.id}`} className="hover:text-yellow-300">
                             {c.name}
                           </Link>
                         ) : (
@@ -453,7 +453,7 @@ export default function AdequacyTrackerPage() {
             <select
               value={form.country_id}
               onChange={(e) => setForm({ ...form, country_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
             >
               <option value="">Select a country</option>
               {countries.map((c) => (
@@ -470,7 +470,7 @@ export default function AdequacyTrackerPage() {
               <select
                 value={form.regime}
                 onChange={(e) => setForm({ ...form, regime: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               >
                 {REGIMES.map((r) => (
                   <option key={r} value={r}>
@@ -485,7 +485,7 @@ export default function AdequacyTrackerPage() {
                 type="date"
                 value={form.effective_date}
                 onChange={(e) => setForm({ ...form, effective_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -495,7 +495,7 @@ export default function AdequacyTrackerPage() {
               <select
                 value={form.old_status}
                 onChange={(e) => setForm({ ...form, old_status: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               >
                 <option value="">Unknown / new</option>
                 {STATUSES.map((s) => (
@@ -510,7 +510,7 @@ export default function AdequacyTrackerPage() {
               <select
                 value={form.new_status}
                 onChange={(e) => setForm({ ...form, new_status: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white focus:border-yellow-400 focus:outline-none"
               >
                 {STATUSES.map((s) => (
                   <option key={s} value={s}>
@@ -526,7 +526,7 @@ export default function AdequacyTrackerPage() {
               value={form.decision_ref}
               onChange={(e) => setForm({ ...form, decision_ref: e.target.value })}
               placeholder="e.g. 2021/914 or DPF"
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -536,7 +536,7 @@ export default function AdequacyTrackerPage() {
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               rows={3}
               placeholder="Context for this adequacy change..."
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <p className="text-xs text-slate-500">

@@ -257,7 +257,7 @@ export default function RecipientDetailPage() {
         <div className="min-w-0">
           <Link
             href="/dashboard/recipients"
-            className="text-xs text-slate-500 hover:text-indigo-300"
+            className="text-xs text-slate-500 hover:text-yellow-300"
           >
             ← Recipients
           </Link>
@@ -313,7 +313,7 @@ export default function RecipientDetailPage() {
                 recipient.contact_email ? (
                   <a
                     href={`mailto:${recipient.contact_email}`}
-                    className="text-indigo-300 hover:underline"
+                    className="text-yellow-400 hover:underline"
                   >
                     {recipient.contact_email}
                   </a>
@@ -375,7 +375,7 @@ export default function RecipientDetailPage() {
               value={spSearch}
               onChange={(e) => setSpSearch(e.target.value)}
               placeholder="Search subprocessors..."
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
             <Button size="sm" onClick={openCreateSp}>
               Add subprocessor
@@ -536,7 +536,7 @@ export default function RecipientDetailPage() {
               type="checkbox"
               checked={!!form.dpf_certified}
               onChange={(e) => setForm((f) => ({ ...f, dpf_certified: e.target.checked }))}
-              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-indigo-600"
+              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-yellow-500"
             />
             DPF self-certified
           </label>

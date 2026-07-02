@@ -268,13 +268,13 @@ export default function OnwardPage() {
           <div className="inline-flex overflow-hidden rounded-lg border border-slate-700">
             <button
               onClick={() => setView('chains')}
-              className={`px-3 py-1.5 text-sm ${view === 'chains' ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 text-sm ${view === 'chains' ? 'bg-yellow-500 text-slate-900' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
             >
               Chains
             </button>
             <button
               onClick={() => setView('legs')}
-              className={`px-3 py-1.5 text-sm ${view === 'legs' ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1.5 text-sm ${view === 'legs' ? 'bg-yellow-500 text-slate-900' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
             >
               Legs
             </button>
@@ -283,12 +283,12 @@ export default function OnwardPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search..."
-            className="min-w-[160px] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="min-w-[160px] flex-1 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={flowFilter}
             onChange={(e) => setFlowFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="">All flows</option>
             {flows.map((f) => (
@@ -301,7 +301,7 @@ export default function OnwardPage() {
             <select
               value={stateFilter}
               onChange={(e) => setStateFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               <option value="">All states</option>
               <option value="covered">covered</option>
@@ -315,7 +315,7 @@ export default function OnwardPage() {
               type="checkbox"
               checked={onlyBroken}
               onChange={(e) => setOnlyBroken(e.target.checked)}
-              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-indigo-600"
+              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-yellow-500"
             />
             Broken only
           </label>

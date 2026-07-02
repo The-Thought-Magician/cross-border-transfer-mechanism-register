@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { authClient } from '@/lib/auth/client'
+import RightRail from '@/components/RightRail'
 
 type NavItem = { label: string; href: string }
 type NavSection = { title: string; items: NavItem[] }
@@ -97,6 +98,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     setDrawerOpen(false)
   }, [pathname])
 
+  const showRail = pathname === '/dashboard' || /^\/dashboard\/flows\/[^/]+$/.test(pathname)
+
   const signOut = async () => {
     await authClient.signOut()
     router.push('/')
@@ -105,7 +108,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   if (!ready) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-950">
-        <span className="h-6 w-6 animate-spin rounded-full border-2 border-slate-700 border-t-indigo-400" />
+        <span className="h-6 w-6 animate-spin rounded-full border-2 border-slate-700 border-t-yellow-400" />
       </div>
     )
   }
@@ -113,7 +116,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const sidebar = (
     <nav className="flex h-full flex-col">
       <div className="flex items-center gap-2 border-b border-slate-800 px-5 py-4">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-yellow-500 text-sm font-bold text-slate-900">
           CB
         </span>
         <span className="text-sm font-semibold leading-tight text-white">
@@ -137,7 +140,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                       href={item.href}
                       className={`block rounded-lg px-3 py-1.5 text-sm transition-colors ${
                         active
-                          ? 'bg-indigo-600/15 font-medium text-indigo-300'
+                          ? 'bg-yellow-500/15 font-medium text-yellow-300'
                           : 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-100'
                       }`}
                     >
@@ -199,6 +202,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </header>
         <main className="flex-1 overflow-y-auto p-4 lg:p-8">{children}</main>
       </div>
+
+      {showRail && <RightRail />}
     </div>
   )
 }

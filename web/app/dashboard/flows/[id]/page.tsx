@@ -57,7 +57,7 @@ interface Mechanism {
 }
 
 const fieldClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500'
+  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-yellow-400 focus:outline-none focus:ring-1 focus:ring-yellow-400'
 const labelClass = 'mb-1.5 block text-xs font-medium uppercase tracking-wide text-slate-500'
 
 function fmtDate(d?: string) {
@@ -200,7 +200,7 @@ export default function FlowDetailPage() {
   if (error || !flow) {
     return (
       <div className="mx-auto max-w-3xl">
-        <Link href="/dashboard/flows" className="text-xs text-slate-500 hover:text-indigo-300">
+        <Link href="/dashboard/flows" className="text-xs text-slate-500 hover:text-yellow-300">
           ← Transfer Flows
         </Link>
         <div className="mt-4">
@@ -240,7 +240,7 @@ export default function FlowDetailPage() {
     <div className="mx-auto max-w-5xl space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <Link href="/dashboard/flows" className="text-xs text-slate-500 hover:text-indigo-300">
+          <Link href="/dashboard/flows" className="text-xs text-slate-500 hover:text-yellow-300">
             ← Transfer Flows
           </Link>
           <div className="mt-1 flex items-center gap-3">
@@ -264,7 +264,7 @@ export default function FlowDetailPage() {
       </div>
 
       {actionMsg && (
-        <div className="rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-4 py-2.5 text-sm text-indigo-200">
+        <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-4 py-2.5 text-sm text-yellow-200">
           {actionMsg}
         </div>
       )}
@@ -411,7 +411,7 @@ export default function FlowDetailPage() {
       <Card>
         <CardHeader className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-white">Transfer mechanism</h2>
-          <Link href="/dashboard/mechanisms" className="text-xs text-indigo-300 hover:text-indigo-200">
+          <Link href="/dashboard/mechanisms" className="text-xs text-yellow-400 hover:text-yellow-300">
             Manage mechanisms →
           </Link>
         </CardHeader>
@@ -522,7 +522,7 @@ export default function FlowDetailPage() {
             <ol className="relative space-y-4 border-l border-slate-800 pl-5">
               {timeline.map((t, i) => (
                 <li key={i} className="relative">
-                  <span className="absolute -left-[1.4rem] top-1 h-2.5 w-2.5 rounded-full border-2 border-indigo-400 bg-slate-950" />
+                  <span className="absolute -left-[1.4rem] top-1 h-2.5 w-2.5 rounded-full border-2 border-yellow-400 bg-slate-950" />
                   <div className="text-sm text-slate-200">{t.label}</div>
                   <div className="text-xs text-slate-500">{fmtDate(t.date)}</div>
                 </li>
@@ -652,7 +652,7 @@ function Fact({
         <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>
         <div className="mt-0.5 text-sm text-slate-200">
           {href && value ? (
-            <Link href={href} className="text-indigo-300 hover:text-indigo-200">
+            <Link href={href} className="text-yellow-400 hover:text-yellow-300">
               {content}
             </Link>
           ) : (
@@ -667,7 +667,7 @@ function Fact({
       <dt className="text-xs uppercase tracking-wide text-slate-500">{label}</dt>
       <dd className="text-right text-sm text-slate-200">
         {href && value ? (
-          <Link href={href} className="text-indigo-300 hover:text-indigo-200">
+          <Link href={href} className="text-yellow-400 hover:text-yellow-300">
             {content}
           </Link>
         ) : (

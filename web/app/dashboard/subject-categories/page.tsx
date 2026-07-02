@@ -248,12 +248,12 @@ export default function SubjectCategoriesPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search name or description..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={scopeFilter}
             onChange={(e) => setScopeFilter(e.target.value as any)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All scopes</option>
             <option value="global">Global</option>
@@ -262,7 +262,7 @@ export default function SubjectCategoriesPage() {
           <select
             value={riskFilter}
             onChange={(e) => setRiskFilter(e.target.value as any)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All risk</option>
             <option value="standard">Standard (&lt;2)</option>
@@ -272,7 +272,7 @@ export default function SubjectCategoriesPage() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as any)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="risk">Sort: risk weight</option>
             <option value="name">Sort: name</option>
@@ -367,7 +367,7 @@ export default function SubjectCategoriesPage() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="e.g. Employees, Customers, Minors"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -381,7 +381,7 @@ export default function SubjectCategoriesPage() {
               step={1}
               value={form.risk_weight || '0'}
               onChange={(e) => setForm({ ...form, risk_weight: e.target.value })}
-              className="w-full accent-indigo-500"
+              className="w-full accent-yellow-400"
             />
             <div className="mt-1 flex justify-between text-[10px] uppercase tracking-wide text-slate-600">
               <span>None</span>
@@ -397,7 +397,7 @@ export default function SubjectCategoriesPage() {
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               rows={3}
               placeholder="When this category applies and why it carries this weight."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>

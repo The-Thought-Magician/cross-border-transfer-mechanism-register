@@ -30,7 +30,7 @@ export default function SignIn() {
     <main className="min-h-screen bg-slate-950 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link href="/" className="text-xl font-black tracking-tight text-indigo-400">
+          <Link href="/" className="text-xl font-black tracking-tight text-yellow-400">
             CrossBorderTransferMechanismRegister
           </Link>
           <h1 className="text-2xl font-bold mt-4 text-white">Sign in to your register</h1>
@@ -48,7 +48,7 @@ export default function SignIn() {
               name="email"
               type="email"
               required
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400"
               placeholder="you@example.com"
             />
           </div>
@@ -58,19 +58,19 @@ export default function SignIn() {
               name="password"
               type="password"
               required
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-400"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white py-3 rounded-lg font-semibold transition-colors"
+            className="w-full bg-yellow-500 hover:bg-yellow-400 disabled:opacity-50 text-slate-900 py-3 rounded-lg font-semibold transition-colors"
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
           <p className="text-center text-slate-400 text-sm">
             No account?{' '}
-            <Link href="/auth/sign-up" className="text-indigo-400 hover:text-indigo-300">
+            <Link href="/auth/sign-up" className="text-yellow-400 hover:text-yellow-300">
               Sign up
             </Link>
           </p>

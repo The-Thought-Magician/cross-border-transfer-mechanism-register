@@ -11,7 +11,7 @@ const tones: Record<Tone, string> = {
   success: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30',
   warning: 'bg-amber-500/10 text-amber-300 border-amber-500/30',
   danger: 'bg-rose-500/10 text-rose-300 border-rose-500/30',
-  info: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/30',
+  info: 'bg-yellow-500/10 text-yellow-300 border-yellow-500/30',
   review: 'bg-sky-500/10 text-sky-300 border-sky-500/30',
 }
 

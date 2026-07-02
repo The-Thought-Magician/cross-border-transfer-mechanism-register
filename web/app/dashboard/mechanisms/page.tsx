@@ -58,7 +58,7 @@ const MECHANISM_TYPES = [
 ]
 
 const fieldClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500'
+  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-yellow-400 focus:outline-none focus:ring-1 focus:ring-yellow-400'
 const labelClass = 'mb-1.5 block text-xs font-medium uppercase tracking-wide text-slate-500'
 
 function fmtDate(d?: string) {
@@ -289,7 +289,7 @@ export default function MechanismsPage() {
                   <div className="w-32 shrink-0 text-xs text-slate-400">{type}</div>
                   <div className="h-3 flex-1 overflow-hidden rounded-full bg-slate-800">
                     <div
-                      className="h-full rounded-full bg-indigo-500"
+                      className="h-full rounded-full bg-yellow-400"
                       style={{ width: `${(count / maxTypeCount) * 100}%` }}
                     />
                   </div>
@@ -391,7 +391,7 @@ export default function MechanismsPage() {
                       {m.flow_id ? (
                         <Link
                           href={`/dashboard/flows/${m.flow_id}`}
-                          className="text-indigo-300 hover:text-indigo-200"
+                          className="text-yellow-400 hover:text-yellow-300"
                         >
                           {flowName(m)}
                         </Link>

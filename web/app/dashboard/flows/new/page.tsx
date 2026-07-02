@@ -39,7 +39,7 @@ const FREQUENCIES = ['one-off', 'occasional', 'regular', 'continuous']
 const RECIPIENT_ROLES = ['controller', 'processor', 'joint-controller', 'sub-processor']
 
 const fieldClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500'
+  'w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:border-yellow-400 focus:outline-none focus:ring-1 focus:ring-yellow-400'
 const labelClass = 'mb-1.5 block text-xs font-medium uppercase tracking-wide text-slate-500'
 
 export default function NewFlowPage() {
@@ -177,7 +177,7 @@ export default function NewFlowPage() {
         <div>
           <Link
             href="/dashboard/flows"
-            className="text-xs text-slate-500 hover:text-indigo-300"
+            className="text-xs text-slate-500 hover:text-yellow-300"
           >
             ← Transfer Flows
           </Link>
@@ -389,7 +389,7 @@ export default function NewFlowPage() {
                       onClick={() => toggle(setSelectedData, c.id)}
                       className={`flex items-center justify-between rounded-lg border px-3 py-2 text-left text-sm transition-colors ${
                         active
-                          ? 'border-indigo-500 bg-indigo-500/10 text-indigo-100'
+                          ? 'border-yellow-400 bg-yellow-500/10 text-slate-100'
                           : 'border-slate-700 bg-slate-950/40 text-slate-300 hover:border-slate-600'
                       }`}
                     >
@@ -429,7 +429,7 @@ export default function NewFlowPage() {
                       onClick={() => toggle(setSelectedSubjects, c.id)}
                       className={`flex items-center justify-between rounded-lg border px-3 py-2 text-left text-sm transition-colors ${
                         active
-                          ? 'border-indigo-500 bg-indigo-500/10 text-indigo-100'
+                          ? 'border-yellow-400 bg-yellow-500/10 text-slate-100'
                           : 'border-slate-700 bg-slate-950/40 text-slate-300 hover:border-slate-600'
                       }`}
                     >

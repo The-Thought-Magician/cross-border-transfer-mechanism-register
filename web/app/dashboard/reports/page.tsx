@@ -305,12 +305,12 @@ export default function ReportsPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search reports…"
-                className="w-44 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-44 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
               <select
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All types</option>
                 {REPORT_TYPES.map((t) => (
@@ -412,7 +412,7 @@ export default function ReportsPage() {
             <input
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="e.g. Q2 2026 board coverage review"
             />
           </div>
@@ -424,7 +424,7 @@ export default function ReportsPage() {
                   key={t.value}
                   className={`flex cursor-pointer items-start gap-3 rounded-lg border px-3 py-2.5 transition ${
                     form.report_type === t.value
-                      ? 'border-indigo-500 bg-indigo-500/10'
+                      ? 'border-yellow-400 bg-yellow-500/10'
                       : 'border-slate-700 bg-slate-900 hover:border-slate-600'
                   }`}
                 >
@@ -434,7 +434,7 @@ export default function ReportsPage() {
                     value={t.value}
                     checked={form.report_type === t.value}
                     onChange={(e) => setForm({ ...form, report_type: e.target.value })}
-                    className="mt-1 accent-indigo-500"
+                    className="mt-1 accent-yellow-400"
                   />
                   <div>
                     <div className="text-sm font-medium text-slate-200">{t.label}</div>

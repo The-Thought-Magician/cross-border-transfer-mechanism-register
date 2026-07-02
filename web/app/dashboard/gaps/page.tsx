@@ -398,12 +398,12 @@ export default function GapsPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search tasks…"
-                className="w-44 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-44 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
               <select
                 value={taskStatusFilter}
                 onChange={(e) => setTaskStatusFilter(e.target.value)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All statuses</option>
                 {TASK_STATUSES.map((s) => (
@@ -415,7 +415,7 @@ export default function GapsPage() {
               <select
                 value={taskPriorityFilter}
                 onChange={(e) => setTaskPriorityFilter(e.target.value)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All priorities</option>
                 {PRIORITIES.map((p) => (
@@ -482,7 +482,7 @@ export default function GapsPage() {
                       <select
                         value={t.status}
                         onChange={(e) => quickStatus(t, e.target.value)}
-                        className="rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none"
+                        className="rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-xs text-slate-200 focus:border-yellow-400 focus:outline-none"
                       >
                         {TASK_STATUSES.map((s) => (
                           <option key={s} value={s}>
@@ -531,7 +531,7 @@ export default function GapsPage() {
             <input
               value={form.title}
               onChange={(e) => setForm({ ...form, title: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="e.g. Attach SCC Module 2 for vendor X"
             />
           </div>
@@ -541,7 +541,7 @@ export default function GapsPage() {
               <select
                 value={form.action_type}
                 onChange={(e) => setForm({ ...form, action_type: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="">— none —</option>
                 {ACTION_TYPES.map((a) => (
@@ -556,7 +556,7 @@ export default function GapsPage() {
               <select
                 value={form.priority}
                 onChange={(e) => setForm({ ...form, priority: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {PRIORITIES.map((p) => (
                   <option key={p} value={p}>
@@ -572,7 +572,7 @@ export default function GapsPage() {
               <select
                 value={form.status}
                 onChange={(e) => setForm({ ...form, status: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {TASK_STATUSES.map((s) => (
                   <option key={s} value={s}>
@@ -587,7 +587,7 @@ export default function GapsPage() {
                 type="date"
                 value={form.due_date}
                 onChange={(e) => setForm({ ...form, due_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -596,7 +596,7 @@ export default function GapsPage() {
             <input
               value={form.flow_id}
               onChange={(e) => setForm({ ...form, flow_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="Link to a transfer flow"
             />
           </div>
@@ -605,7 +605,7 @@ export default function GapsPage() {
             <input
               value={form.assignee_user_id}
               onChange={(e) => setForm({ ...form, assignee_user_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           {(editingTask || form.status === 'done') && (
@@ -615,7 +615,7 @@ export default function GapsPage() {
                 value={form.resolution_note}
                 onChange={(e) => setForm({ ...form, resolution_note: e.target.value })}
                 rows={2}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                 placeholder="How was this remediated?"
               />
             </div>

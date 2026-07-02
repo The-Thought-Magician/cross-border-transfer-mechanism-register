@@ -253,12 +253,12 @@ export default function DataCategoriesPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search categories…"
-                className="w-48 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="w-48 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
               />
               <select
                 value={scopeFilter}
                 onChange={(e) => setScopeFilter(e.target.value as any)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All scopes</option>
                 <option value="global">Global / seeded</option>
@@ -267,7 +267,7 @@ export default function DataCategoriesPage() {
               <select
                 value={specialFilter}
                 onChange={(e) => setSpecialFilter(e.target.value as any)}
-                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 <option value="all">All types</option>
                 <option value="special">Special category</option>
@@ -322,7 +322,7 @@ export default function DataCategoriesPage() {
                             <span
                               key={n}
                               className={`h-2 w-2 rounded-full ${
-                                n <= (c.sensitivity_weight ?? 1) ? 'bg-indigo-400' : 'bg-slate-700'
+                                n <= (c.sensitivity_weight ?? 1) ? 'bg-yellow-400' : 'bg-slate-700'
                               }`}
                             />
                           ))}
@@ -381,7 +381,7 @@ export default function DataCategoriesPage() {
             <input
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="e.g. Health data"
             />
           </div>
@@ -391,7 +391,7 @@ export default function DataCategoriesPage() {
               <select
                 value={form.article}
                 onChange={(e) => setForm({ ...form, article: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {ARTICLES.map((a) => (
                   <option key={a} value={a}>
@@ -410,7 +410,7 @@ export default function DataCategoriesPage() {
                 max={5}
                 value={form.sensitivity_weight}
                 onChange={(e) => setForm({ ...form, sensitivity_weight: Number(e.target.value) })}
-                className="mt-2 w-full accent-indigo-500"
+                className="mt-2 w-full accent-yellow-400"
               />
             </div>
           </div>
@@ -420,7 +420,7 @@ export default function DataCategoriesPage() {
               value={form.description}
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               rows={2}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <label className="flex items-center gap-2 text-sm text-slate-300">
@@ -428,7 +428,7 @@ export default function DataCategoriesPage() {
               type="checkbox"
               checked={form.is_special}
               onChange={(e) => setForm({ ...form, is_special: e.target.checked })}
-              className="h-4 w-4 rounded border-slate-600 bg-slate-900 accent-indigo-500"
+              className="h-4 w-4 rounded border-slate-600 bg-slate-900 accent-yellow-400"
             />
             Special category (Art.9 / Art.10) — heightens transfer risk
           </label>

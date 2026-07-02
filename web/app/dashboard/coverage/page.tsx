@@ -285,12 +285,12 @@ export default function CoveragePage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search flows / conditions..."
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
             <select
               value={stateFilter}
               onChange={(e) => setStateFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               <option value="">All states</option>
               <option value="covered">covered</option>
@@ -336,7 +336,7 @@ export default function CoveragePage() {
                     <TD className="font-medium text-slate-100">
                       <Link
                         href={`/dashboard/flows/${c.flow_id}`}
-                        className="hover:text-indigo-300"
+                        className="hover:text-yellow-300"
                       >
                         {c.flow_name || c.flow_id}
                       </Link>

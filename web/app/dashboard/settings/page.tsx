@@ -406,7 +406,7 @@ export default function SettingsPage() {
             onClick={() => setTab(t.id)}
             className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-medium transition-colors ${
               tab === t.id
-                ? 'border-indigo-500 text-white'
+                ? 'border-yellow-400 text-white'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -463,7 +463,7 @@ export default function SettingsPage() {
                       onChange={(e) =>
                         setProfileForm({ ...profileForm, default_regime: e.target.value })
                       }
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                      className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                     >
                       {REGIMES.map((r) => (
                         <option key={r} value={r}>
@@ -487,7 +487,7 @@ export default function SettingsPage() {
                           tia_review_months: Number(e.target.value),
                         })
                       }
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                      className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -631,7 +631,7 @@ export default function SettingsPage() {
                 <select
                   value={activeWorkspaceId}
                   onChange={(e) => setActiveWorkspaceId(e.target.value)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                 >
                   {workspaces.length === 0 && <option value="">No workspaces</option>}
                   {workspaces.map((w) => (
@@ -756,7 +756,7 @@ export default function SettingsPage() {
               </CardBody>
             </Card>
 
-            <Card className={isPro ? 'border-indigo-500/40' : 'border-slate-700'}>
+            <Card className={isPro ? 'border-yellow-500/40' : 'border-slate-700'}>
               <CardHeader className="flex items-center justify-between">
                 <span className="text-sm font-semibold text-white">Pro</span>
                 {isPro ? <Badge tone="success">Current</Badge> : <Badge tone="info">Upgrade</Badge>}
@@ -837,7 +837,7 @@ export default function SettingsPage() {
               value={wsForm.name}
               onChange={(e) => setWsForm({ ...wsForm, name: e.target.value })}
               placeholder="Acme EU Compliance"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -846,7 +846,7 @@ export default function SettingsPage() {
               <select
                 value={wsForm.default_regime}
                 onChange={(e) => setWsForm({ ...wsForm, default_regime: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {REGIMES.map((r) => (
                   <option key={r} value={r}>
@@ -867,7 +867,7 @@ export default function SettingsPage() {
                 onChange={(e) =>
                   setWsForm({ ...wsForm, tia_review_months: Number(e.target.value) })
                 }
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
           </div>
@@ -879,7 +879,7 @@ export default function SettingsPage() {
               value={wsForm.exporting_entities}
               onChange={(e) => setWsForm({ ...wsForm, exporting_entities: e.target.value })}
               placeholder="Acme GmbH, Acme UK Ltd"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>
@@ -920,7 +920,7 @@ export default function SettingsPage() {
               value={inviteForm.user_id}
               onChange={(e) => setInviteForm({ ...inviteForm, user_id: e.target.value })}
               placeholder="usr_..."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -928,7 +928,7 @@ export default function SettingsPage() {
             <select
               value={inviteForm.role}
               onChange={(e) => setInviteForm({ ...inviteForm, role: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               <option value="member">Member</option>
               <option value="reviewer">Reviewer</option>

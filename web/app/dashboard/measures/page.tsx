@@ -248,7 +248,7 @@ export default function MeasuresPage() {
                 const pct = stats.total ? (n / stats.total) * 100 : 0
                 const color =
                   t.value === 'technical'
-                    ? 'bg-indigo-500'
+                    ? 'bg-yellow-400'
                     : t.value === 'contractual'
                       ? 'bg-sky-500'
                       : 'bg-emerald-500'
@@ -257,7 +257,7 @@ export default function MeasuresPage() {
             </div>
             <div className="mt-3 flex flex-wrap gap-4 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-indigo-500" /> Technical ({stats.byType['technical'] || 0})
+                <span className="h-2 w-2 rounded-full bg-yellow-400" /> Technical ({stats.byType['technical'] || 0})
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-sky-500" /> Contractual ({stats.byType['contractual'] || 0})
@@ -277,12 +277,12 @@ export default function MeasuresPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search measures..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All types</option>
             {MEASURE_TYPES.map((t) => (
@@ -294,7 +294,7 @@ export default function MeasuresPage() {
           <select
             value={effFilter}
             onChange={(e) => setEffFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All effectiveness</option>
             {EFFECTIVENESS.map((eff) => (
@@ -422,7 +422,7 @@ export default function MeasuresPage() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="e.g. End-to-end encryption with EU-held keys"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -431,7 +431,7 @@ export default function MeasuresPage() {
               <select
                 value={form.measure_type}
                 onChange={(e) => setForm({ ...form, measure_type: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {MEASURE_TYPES.map((t) => (
                   <option key={t.value} value={t.value}>
@@ -445,7 +445,7 @@ export default function MeasuresPage() {
               <select
                 value={form.effectiveness}
                 onChange={(e) => setForm({ ...form, effectiveness: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               >
                 {EFFECTIVENESS.map((eff) => (
                   <option key={eff.value} value={eff.value}>
@@ -462,7 +462,7 @@ export default function MeasuresPage() {
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               rows={3}
               placeholder="How this measure mitigates third-country access risk."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none"
             />
           </div>
         </form>

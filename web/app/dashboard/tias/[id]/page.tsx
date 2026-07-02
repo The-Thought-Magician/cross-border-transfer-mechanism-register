@@ -279,7 +279,7 @@ export default function TiaDetailPage() {
   if (error && !tia) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/tias" className="text-sm text-indigo-300 hover:text-indigo-200">
+        <Link href="/dashboard/tias" className="text-sm text-yellow-200 hover:text-yellow-300">
           ← Back to TIAs
         </Link>
         <EmptyState title="Could not load TIA" description={error} action={<Button onClick={load}>Retry</Button>} />
@@ -295,7 +295,7 @@ export default function TiaDetailPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/dashboard/tias" className="text-sm text-indigo-300 hover:text-indigo-200">
+        <Link href="/dashboard/tias" className="text-sm text-yellow-200 hover:text-yellow-300">
           ← Back to TIAs
         </Link>
         <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
@@ -386,7 +386,7 @@ export default function TiaDetailPage() {
                   }
                   rows={3}
                   placeholder="Document your assessment for this step…"
-                  className="mt-3 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-indigo-500 focus:outline-none disabled:opacity-60"
+                  className="mt-3 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-600 focus:border-yellow-400 focus:outline-none disabled:opacity-60"
                 />
                 <div className="mt-3 flex items-center gap-3">
                   <label className="text-xs font-medium text-slate-400">Risk points</label>
@@ -402,7 +402,7 @@ export default function TiaDetailPage() {
                         [n]: { ...prev[n], risk_points: Number(e.target.value) },
                       }))
                     }
-                    className="flex-1 accent-indigo-500"
+                    className="flex-1 accent-yellow-400"
                   />
                   <input
                     type="number"
@@ -416,7 +416,7 @@ export default function TiaDetailPage() {
                         [n]: { ...prev[n], risk_points: Number(e.target.value) || 0 },
                       }))
                     }
-                    className="w-16 rounded-lg border border-slate-700 bg-slate-950 px-2 py-1 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none disabled:opacity-60"
+                    className="w-16 rounded-lg border border-slate-700 bg-slate-950 px-2 py-1 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none disabled:opacity-60"
                   />
                 </div>
               </div>
@@ -447,7 +447,7 @@ export default function TiaDetailPage() {
                   <label
                     key={m.id}
                     className={`flex cursor-pointer items-start gap-3 rounded-lg border p-3 transition-colors ${
-                      checked ? 'border-indigo-500/50 bg-indigo-500/10' : 'border-slate-800 bg-slate-900/40 hover:bg-slate-800/40'
+                      checked ? 'border-yellow-400/50 bg-yellow-500/10' : 'border-slate-800 bg-slate-900/40 hover:bg-slate-800/40'
                     }`}
                   >
                     <input
@@ -494,7 +494,7 @@ export default function TiaDetailPage() {
               <input
                 value={meta.title}
                 onChange={(e) => setMeta({ ...meta, title: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -503,7 +503,7 @@ export default function TiaDetailPage() {
                 <select
                   value={meta.status}
                   onChange={(e) => setMeta({ ...meta, status: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                 >
                   {['draft', 'in-progress', 'in-review', 'approved', 'rejected'].map((s) => (
                     <option key={s} value={s}>
@@ -518,7 +518,7 @@ export default function TiaDetailPage() {
                   type="date"
                   value={meta.review_due_date}
                   onChange={(e) => setMeta({ ...meta, review_due_date: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                 />
               </div>
             </div>
@@ -528,7 +528,7 @@ export default function TiaDetailPage() {
                 value={meta.summary}
                 onChange={(e) => setMeta({ ...meta, summary: e.target.value })}
                 rows={3}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               />
             </div>
             <Button onClick={saveMeta} disabled={savingMeta}>

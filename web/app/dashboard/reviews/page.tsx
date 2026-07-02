@@ -206,12 +206,12 @@ export default function ReviewsPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by entity or comment…"
-            className="w-56 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+            className="w-56 rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:border-yellow-400 focus:outline-none"
           />
           <select
             value={entityFilter}
             onChange={(e) => setEntityFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All entity types</option>
             {ENTITY_TYPES.map((t) => (
@@ -223,7 +223,7 @@ export default function ReviewsPage() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
           >
             <option value="all">All statuses</option>
             {STATUSES.map((s) => (
@@ -361,7 +361,7 @@ export default function ReviewsPage() {
             <select
               value={form.entity_type}
               onChange={(e) => setForm({ ...form, entity_type: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             >
               {ENTITY_TYPES.map((t) => (
                 <option key={t} value={t}>
@@ -375,7 +375,7 @@ export default function ReviewsPage() {
             <input
               value={form.entity_id}
               onChange={(e) => setForm({ ...form, entity_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="ID of the TIA / SCC / flow to review"
             />
           </div>
@@ -384,7 +384,7 @@ export default function ReviewsPage() {
             <input
               value={form.reviewer_user_id}
               onChange={(e) => setForm({ ...form, reviewer_user_id: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
             />
           </div>
           <div>
@@ -393,7 +393,7 @@ export default function ReviewsPage() {
               value={form.comment}
               onChange={(e) => setForm({ ...form, comment: e.target.value })}
               rows={2}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
               placeholder="Context for the reviewer"
             />
           </div>
@@ -438,7 +438,7 @@ export default function ReviewsPage() {
                 value={decideComment}
                 onChange={(e) => setDecideComment(e.target.value)}
                 rows={3}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-yellow-400 focus:outline-none"
                 placeholder="Rationale for the decision (recorded in the audit trail)"
               />
             </div>
